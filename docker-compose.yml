@@ -1,16 +1,5 @@
 version: "3.3"
 
-volumes:
-    shared-workspace:
-    hadoop_datanode1:
-    hadoop_datanode2:
-    hadoop_datanode3:
-    hadoop_namenode:
-    hadoop_historyserver:
-networks:
-    spark-net:
-        driver: bridge
-
 services:
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
@@ -113,6 +102,17 @@ services:
       - hadoop_datanode3:/hadoop/dfs/data
     env_file:
       - ./hadoop.env
+
+volumes:
+    shared-workspace:
+    hadoop_datanode1:
+    hadoop_datanode2:
+    hadoop_datanode3:
+    hadoop_namenode:
+    hadoop_historyserver:
+networks:
+    spark-net:
+        driver: bridge
 
   spark-master:
     image: bde2020/spark-master:3.0.0-hadoop3.2
