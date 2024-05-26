@@ -20,3 +20,6 @@ The dataset used in this project can be found at [https://www.kaggle.com/dataset
   - scikit-learn
   - matplotlib
   - seaborn
+
+## Notebooks
+Data Analysis and Prediction (.ipynb): This Jupyter Notebook contains the complete data analysis process, from data cleaning and exploration to model building and evaluation. It provides a step-by-step walkthrough of how the predictions are generated, including the code and methodologies used.
